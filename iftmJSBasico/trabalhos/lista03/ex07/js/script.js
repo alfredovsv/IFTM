@@ -35,6 +35,11 @@ function entrar(){
         return;
     }
 
+     if (senha.value == null || senha.value == "" || confirmarSenha.value == null || confirmarSenha.value == ""){
+        alert("Digite um senha valido");
+        return;
+    }
+
 
     // b) Segunda validação: Só será realizada após a primeira validação e consistirá em
     // verificar se os dados dos campos “Senha” e “Confirmar senha” são iguais. Caso
