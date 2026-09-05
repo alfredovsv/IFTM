@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Lista 03 - JS Básico</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <table class="container">
+        <tr>
+            <td colspan="3">
+                <h1 class="titulo">Acesso ao Sistema</h1>
+            </td>
+        </tr>
+        <form action="">
+            <tr>
+                <td class="rotulo">Login</td>
+                <td colspan="2"><input type="text" id="login" name="login" required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="rotulo">Senha</td>
+                <td><input type="password" id="senha" name="senha" maxlength="8" required></td>
+                <td class="aviso">(max. 8 caracteres)</td>
+            </tr>
+            <tr>
+                <!-- 
+                IV. Os campos “Senha” e “Confirmar senha” não devem permitir que a informação digitada
+                pelo usuário fique visível a qualquer pessoa (tipo password - oculto) 
+                -->
+                <td class="rotulo">Confirmar Senha</td>
+                <td><input type="password" id="confirmarSenha" name="confirmarSenha" maxlength="8" required></td>
+                <td class="aviso">(max. 8 caracteres)</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="botoes">
+                    <input type="button" value="Entrar" id="btnEntrar">
+                    <input type="button" value="Limpar" id="btnLimpar"> 
+                </td>
+            </tr>
+        </form>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,7 @@
+.calculadora input[type="number"]{
+    width: 105px;
+}
+
+.calculadora input[type="button"]{
+    width: 40px;
+}
