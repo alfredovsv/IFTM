@@ -51,10 +51,15 @@ input[type="password"] {
     width: 90px;
 }
 
-
+/* VII. Colocar o texto “(max. 8 caracteres)” ao lado dos campos “Senha” e “Confirmar senha”
+com as seguintes configurações:
+a) Cor da fonte: vermelho
+b) Estilo da fonte: verdana
+c) Tamanho da fonte: 10 pixels */
 .aviso {
     color: red;
-    font-size: 12px;
+    font-family: Verdana;
+    font-size: 10px;
     padding-left: 5px;
 }
 
