@@ -1,0 +1,114 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+}
+/*Preparando o cartão de cada cantidadto
+.candidato-card{
+     width: 200px;
+     display: inline-block; 
+}
+
+.candidato-card img{
+    width: 150px;
+    height: 150px;
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #1f2937;
+    padding-bottom: 40px;
+}
+
+header {
+    background-color: #1e3a5f;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Container que organiza os cards lado a lado */
+.container,
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+/* Card de cada candidato */
+.candidato-card {
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.candidato-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.candidato-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #1e3a5f;
+}
+
+.candidato-card p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.candidato-card p span {
+    font-weight: bold;
+    color: #2563eb;
+    font-size: 1.2rem;
+}
+
+.candidato-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e5e7eb;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.1s ease;
+}
+
+.candidato-card img:hover {
+    border-color: #2563eb;
+}
+
+.candidato-card img:active {
+    transform: scale(0.96);
+}
+
+.candidato-card form {
+    display: flex;
+    justify-content: center;
+}
