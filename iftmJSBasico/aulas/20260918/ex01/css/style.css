@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0PX;
+}
+
+form{
+    display: flex;
+    flex-direction: column; /*Coloca todos elementos em colunas*/
+    width: 250px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+input[type="text"], input[type="password"]{
+    margin-bottom: 15px;
+    padding: 8px;
+}
+
+input[type="button"]{
+    width: 80%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 8px;
+}
