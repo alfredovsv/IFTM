@@ -1,0 +1,167 @@
+
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif; /* Fonte serifada igual à da imagem */
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+} */
+
+/* --- Estilos da index.html --- */
+.login-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.login-box {
+    border: 2px solid #006400; /* Borda verde */
+    padding: 30px 40px;
+    border-radius: 4px;
+
+}
+
+.login-box legend {
+    color: #006400;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 10px;
+    margin: 0 auto; /* Centraliza o texto do legend */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 1.25rem;
+    color: #006400;
+}
+
+.input-group label {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    border-bottom: 2px solid #006400; /* Linha verde inferior */
+    font-size: 1.25rem;
+    color: #006400;
+    outline: none;
+    padding: 2px 5px;
+}
+
+/* Botão Entrar (index) */
+input[type="button"] {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* #btn-entrar:hover {
+    background-color: #005f00;
+} */
+
+/* --- Estilos da menu.html --- */
+.menu-container {
+    text-align: center;
+    max-width: 800px;
+}
+
+.boas-vindas {
+    color: #006400;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Botão Convidado (menu) */
+.btn-menu {
+    display: inline-block;
+    width: 100%;
+    max-width: 450px;
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    
+}
+
+
+
+/* Container principal usando Flexbox para centralizar tudo horizontalmente */
+.container-felinos {
+    display: flex;
+    justify-content: center; /* Centraliza as colunas horizontalmente */
+    align-items: flex-start; /* Alinha os itens pelo topo */
+    gap: 30px;               /* Espaçamento entre cada gato */
+    margin-top: 50px;        /* Afastamento do topo da tela */
+}
+
+
+
+/* Estilo individual de cada coluna de gato */
+.coluna-gato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Centraliza o texto e botões abaixo da imagem */
+    width: 160px;            /* Largura sugerida para cada bloco */
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Ajuste das imagens dos gatos */
+.coluna-gato img {
+    max-width: 100px;        /* Ajuste o tamanho de acordo com seus GIFs */
+    height: auto;
+    margin-bottom: 15px;     /* Espaço entre a imagem e o texto */
+}
+
+/* Estilização do botão do Gato 5 */
+#btnSortear {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-align: center; 
+}
+
+
+/* Estilização do campo de texto do Gato 5 */
+#numeroSorteado {
+    width: 120px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 3px;
+}
