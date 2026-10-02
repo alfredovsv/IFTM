@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furmulario</title>
+</head>
+<body>
+    <h2>Raido Button com Thymeleaf</h2>
+    <div>
+        <!-- O th:each vai repetir este bloco para cada plano da lista -->
+         <div th:each="plano: ${opcoesPlanos}">
+            <input th:value="${plano}" type="radio">
+            <label th:text="${plano}" >Nome Plano</label>
+
+         </div>
+    </div>
+
+    <h2>Radio Button direto HTML</h2>
+    <div>
+        <input type="radio" name="planoInternet" id="gratuito" value="gratuito">
+        <label for="">Gratuito</label>
+        <input type="radio" name="planoInternet" id="mensal" value="mensal">
+        <label for="">Mensal</label>
+        <input type="radio" name="planoInternet" id="anual" value="anual">
+        <label for="">Anual</label>
+    </div>
+    
+    <h2>Checkbox via Thymeleaf</h2>
+    <div>
+        <span th:each="tech , techStat : ${listaTecnologias} ">
+            <input type="checkbox" name="tecnologias"  th:id="'tech-' + ${techStat.index}" th:value="${tech}">
+            <label th:for="'tech-' + ${techStat.index}" th:text="${tech}"></label>
+        </span>
+    </div>
+
+
+
+    
+</body>
+</html>
