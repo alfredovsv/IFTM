@@ -64,6 +64,12 @@ public class Ex03Regex {
         //[@] para representar o @
 
         // | é ou
+        // ^ como com
+
+        // $ termina com
+
+        // ^Texto  O texto obrigatoriamente começa com "Texto".
+        //[^Texto] Qualquer caractere que não seja 'T', 'e', 'x', 't' ou 'o'.
     
 
         s.close();;

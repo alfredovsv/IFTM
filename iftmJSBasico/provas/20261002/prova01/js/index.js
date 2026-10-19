@@ -22,6 +22,7 @@ document.getElementById("btnProcessar").addEventListener("click", function (){
     localStorage.setItem("txt02",txt02);
 
     window.location.href  = "dashboard.html";
+    // window.open("dashboard.html","_self");
 
 });
 
