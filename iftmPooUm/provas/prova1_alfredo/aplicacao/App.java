@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import academia.Academia;
 import academia.Utilitaria;
 
 public class App {
@@ -106,33 +107,37 @@ public class App {
             //MENU OP 1
             if(op == 2){
                 if (validaUsuario()){
-                    System.out.println("Digite o código do aluno");
-                    String codigoAluno = s.nextLine();
-                    Aluno alunoSetado = null;
 
-                    //pega o a aluno da lista
-                    for (Aluno aluno : listaAlunos) {
-                        if (aluno.getCodigo().equalsIgnoreCase(codigoAluno)) {
-                                alunoSetado = aluno;
-                                break;
-                        }
-                    }
+                    personal(s, listaAlunos);
+                    // System.out.println("Digite o código do aluno");
+                    // String codigoAluno = s.nextLine();
+                    // Aluno alunoSetado = null;
 
-                    // Se o aluno já utilizou o limite de acessos permitido na categoria dele, então exiba
-                    // mensagem dizendo que ele não poderá ter mais aula gratuita com o personal.
+                    // //pega o a aluno da lista
+                    // for (Aluno aluno : listaAlunos) {
+                    //     if (aluno.getCodigo().equalsIgnoreCase(codigoAluno)) {
+                    //             alunoSetado = aluno;
+                    //             break;
+                    //     }
+                    // }
 
-
-                    // Se ainda ele não atingiu o limite máximo permitido, atualize o seu atributo acesso e o atributo acessos.
-
-
-                    //Se o aluno não foi cadastrado, exiba mensagem informando que ele não foi cadastrado ainda e volte ao MENU.
-                    if (alunoSetado == null){
-                        System.out.println("O aluno não foi cadastrado");
-                        s.nextLine();
-                    }
+                    
+                    // // Se o aluno já utilizou o limite de acessos permitido na categoria dele, então exiba
+                    // // mensagem dizendo que ele não poderá ter mais aula gratuita com o personal.
 
 
-                    //Se o número máximo de aulas com personal na academia for atingido, mostre uma mensagem informando a impossibilidade da aula e volte ao MENU.
+                    // // Se ainda ele não atingiu o limite máximo permitido, atualize o seu atributo acesso e o atributo acessos.
+
+                    // //Se o aluno não foi cadastrado, exiba mensagem informando que ele não foi cadastrado ainda e volte ao MENU.
+                    // if (alunoSetado == null){
+                    //     System.out.println("O aluno não foi cadastrado");
+                    //     s.nextLine();
+                    // }
+
+                    
+
+
+                    // //Se o número máximo de aulas com personal na academia for atingido, mostre uma mensagem informando a impossibilidade da aula e volte ao MENU.
                 }
             }
 
@@ -360,5 +365,51 @@ public class App {
             System.out.println(aluno.exibe2(1));
         }
 
+    }
+
+     public static void personal(Scanner s, List<Aluno>  alunos) {
+        System.out.print("Código do aluno: ");
+        String codigo = s.nextLine();
+
+        Aluno aluno = null;
+        for (Aluno a : alunos) {
+            if (a.getCodigo().equalsIgnoreCase(codigo)) {
+                aluno = a;
+            }
+        }
+
+         // //Se o aluno não foi cadastrado, exiba mensagem informando que ele não foi cadastrado ainda e volte ao MENU.
+        if (aluno == null) {
+            System.out.println("Aluno ainda não cadastrado.");
+            return;
+        }
+
+         
+        // Se a categoria do
+        // aluno for 1, então ele não tem direito a ter essas aulas com personal. Se a categoria do
+        // aluno for 2, então ele tem direito a ter 1 aula com personal. Se a categoria for 3, então ele
+        // tem direito a ter até 2 aulas com personal.
+        int limite = aluno.categoria - 1; // cat 1 = 0, cat 2 = 1, cat 3 = 2
+
+        // // Se o aluno já utilizou o limite de acessos permitido na categoria dele, então exiba
+        // // mensagem dizendo que ele não poderá ter mais aula gratuita com o personal.
+        if (aluno.getAcessos() >= limite) {
+            System.out.println("Esse aluno não poderá ter mais aula gratuita com o personal.");
+            return;
+        }
+
+        
+
+        // // Se ainda ele não atingiu o limite máximo permitido, atualize o seu atributo acesso e o atributo acessos.
+
+        //Pensar comou funciona com acadiemaia
+        if (Academia.getAcessos() >= 5) {
+            System.out.println("Limite de 5 aulas com personal na academia atingido. Aula impossível.");
+            return;
+        }
+
+        aluno.setAcessos(aluno.getAcessos() + 1);
+        Academia.setAcessos(Academia.getAcessos() + 1);
+        System.out.println("Aula com personal registrada!");
     }
 }

@@ -21,6 +21,16 @@ public class Aluno {
         return this.codigo;
     }
 
+    //Clarimundo precisei cirar o getAcesso
+    public int getAcessos(){
+        return this.acessos;
+    }
+
+    //Clarimundo precisei criar o setAcesso
+    public void setAcessos(int acessos){
+        acessos = this.acessos;
+    }
+
     
     //Clarimundo pediu para ignorar
     // public Aluno (String codigo, String nome, String telefone, int acessos){

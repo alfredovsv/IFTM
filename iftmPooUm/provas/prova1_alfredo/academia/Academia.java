@@ -10,7 +10,16 @@ public class Academia {
     // aluno for 1, então ele não tem direito a ter essas aulas com personal. Se a categoria do
     // aluno for 2, então ele tem direito a ter 1 aula com personal. Se a categoria for 3, então ele
     // tem direito a ter até 2 aulas com personal.
-    static int acesso = 0;
+    static int acessos = 0;
+
+     //Clarimundo precisei criar os metodos, get e set
+    public static int getAcessos() {
+        return acessos;
+    }
+
+    public static void setAcessos(int novoValor) {
+        acessos = novoValor;
+    }
 
     
     //3. Contém 1 construtor padrão.
@@ -22,4 +31,7 @@ public class Academia {
     public void atualiza(int alunos){
         this.alunos += alunos;
     }
+
+
+   
 }
